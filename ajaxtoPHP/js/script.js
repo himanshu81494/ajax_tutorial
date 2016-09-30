@@ -1,7 +1,6 @@
-ajax_post = function(){
+ajax_post = function(url){
   // XMLHttpRequest object
   var hr = new XMLHttpRequest();
-  var url = "parser.php";
   var fn = document.getElementById("first_name").value;
   var ln = document.getElementById("last_name").value;
   var vars = "firstname="+fn+"&lastname="+ln;
@@ -18,4 +17,4 @@ ajax_post = function(){
   // send the data to PHP
   hr.send(vars);
   document.getElementById("status").innerHTML = "processing..";
-}`
+};
